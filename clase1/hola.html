@@ -6,12 +6,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- PARTE VISUAL DE LA PAGINA  !!!! -->
         <style>
+            /* SOY UN SELECTOR DE LA ETIQUETA BODY */
             body {
                 background-color: rgb(211, 49, 21);
             }
 
+            /* SOY UN SELECTOR DE LA ETIQUETA H1 */
             h1 {
                 color: red;
+            }
+
+            /* SOY UN SELECTOR DE LA ETIQUETA TABLE */
+            table {
+
+            }
+
+            /* SOY UN SELECTOR DE CLASE tabla-linda  */
+            .tabla-linda {
+                width: 500px;
+                border: 1px solid rgb(0, 255, 0);
+                background-color: blue;
             }
         </style>
         <!-- CODIGO JAVA SCRIPT!!!! -->
@@ -31,22 +45,22 @@
         <!-- LINKS -->
         <a href="https://www.google.com">Ir a google</a>
         <a href="https://www.google.com" target="_blank">Ir a google en una nueva ventana</a>
-        <a href="chau.html">Ir chau</a>
+        <a href="chau.html" class="tabla-linda">Ir chau</a>
 
-        <!-- EJEMPLO DE LINK CON IMAGEN!!!! -->
+        <!-- EJEMPLO DE LINK CON IMAGEN!!!! JPG / PNG / GIF  -->
         <a href="https://www.google.com">
             <img src="img/foto_madonna.webp" style="max-width: 100px;" >
         </a>
         
-
         <br>
         <br>
         <hr> <!-- SOY UNA LINEA NO SOY UN SALTO DE LINEA :) -->
         <br>
-
-
-        <img src="img/foto_madonna.webp">
-        <table>
+        <!-- SOY UN EJEMPLO DE UNA IMAGEN -->
+        <img src="img/foto_madonna.webp" style="max-width: 300px;">
+        
+        <!-- SOY UN EJEMPLO DE TABLA!!! -->
+        <table class="tabla-linda">
             <tr>
                 <td>Nombre</td>
                 <td>Apellido</td>
@@ -65,6 +79,14 @@
                 <td><img src="img/foto_madonna.webp" style="max-width: 100px;" ></td>
             </tr>
         </table>
+
+        <!-- SOY UNA CAJA PARA PONER CONTENIDO -->
+        <div class="tabla-linda">
+            <p>Ejemplo de div!!!!</p>
+            <p>Ejemplo de div!!!!</p>
+            <p>Ejemplo de div!!!!</p>
+        </div>
+
         <button type="button" onclick="saludar()">Saludar</button>
     </body>
 </html>
