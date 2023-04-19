@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.jpeg" class="logo-principal">
+                Ejemplo curso web
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="inicio.html">Inicio</a>
+                    <a class="nav-link" href="nuevo-reclamo.html">Nuevo reclamo</a>
+                    <a class="nav-link" href="listado-reclamos.html">Listado reclamos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Formulario de reclamo</h1>
+
+        <div class="mb-3">
+          <label for="campoNotasReclamo" class="form-label">Descripción del reclamo</label>
+          <textarea class="form-control" id="campoReclamo" rows="5"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="campoEstadoReclamo" class="form-label">Estado</label>
+          <select id="campoEstadoReclamo" class="form-select" aria-label="Default select example">
+            <option value="abierto">Abierto</option>
+            <option value="cerrado">Cerrado</option>
+            <option value="incorrecto">Incorrecto</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="campoPrioridadReclamo" id="campoPrioridadReclamoAlta" value="alta">
+            <label class="form-check-label" for="campoPrioridadReclamoAlta">1</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="campoPrioridadReclamo" id="campoPrioridadReclamoBaja" value="baja">
+            <label class="form-check-label" for="campoPrioridadReclamoBaja">2</label>
+          </div>  
+        </div>
+
+        <div class="mb-3">
+          <label for="campoNombreReclamo" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="campoNombreReclamo" placeholder="Juan">
+        </div>
+
+        <div class="mb-3">
+          <label for="campoApellidoReclamo" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="campoApellidoReclamo" placeholder="Perez">
+        </div>
+
+        <div class="mb-3">
+          <label for="campoEmailReclamo" class="form-label">Email</label>
+          <input type="email" class="form-control" id="campoEmailReclamo" placeholder="name@example.com">
+        </div>
+
+
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>
