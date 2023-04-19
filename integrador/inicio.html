@@ -84,8 +84,11 @@
     <script src="js/bootstrap.bundle.js"></script>
 
     <script>
-
-      $(document).ready(function() { //Este metodo se ejecuta cuando se termina de cargar todo el HTML de la pagina y el DOM esta listo para trabajar!!!
+      // document es la variable que representa a todos los elementos HTML de la pagina document = DOM
+      // Este metodo "ready" se ejecuta cuando se termina de cargar todo el HTML de la pagina y el DOM esta listo para trabajar!!!
+      // Sin este ready no puedo hacer nada porque la pagina no esta lista para trabajar!!!! 
+      $(document).ready(function() { 
+        // #formularioDeReclamo es el id que tiene el tag <form id="formularioDeReclamo" action="altadereclamo.html" method="get">
         $('#formularioDeReclamo').validate(); //Ejecuta la validacion de la libreria https://jqueryvalidation.org/
       });
 
