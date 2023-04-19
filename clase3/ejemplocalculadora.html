@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function sumarDosNumeros() {
+            var campoNumero1 = document.getElementById('campoNumero1');
+            var campoNumero2 = document.getElementById('campoNumero2');
+            var campoTotal = document.getElementById('campoTotal');
+
+            var valorCampoNumero1 = parseInt(campoNumero1.value);
+            var valorCampoNumero2 = parseInt(campoNumero2.value);
+            var total = valorCampoNumero1 + valorCampoNumero2;
+
+            campoTotal.value = total;
+        }
+    </script>
+</head>
+<body>
+    Numero1: <input type="number" value="0" id="campoNumero1"><br>
+    Numero2: <input type="number" value="0" id="campoNumero2"><br>
+    Total: <input type="number" id="campoTotal" value="0" readonly><br>
+    <button type="button" onclick="sumarDosNumeros()">Sumar</button>
+</body>
+</html>
