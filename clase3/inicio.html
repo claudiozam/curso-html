@@ -31,14 +31,15 @@
     <div class="container">
         <h1>Formulario de reclamo</h1>
 
+      <form action="altadereclamo.html" method="get">
         <div class="mb-3">
           <label for="campoNotasReclamo" class="form-label">Descripción del reclamo</label>
-          <textarea class="form-control" id="campoReclamo" rows="5"></textarea>
+          <textarea class="form-control" id="campoNotasReclamo" rows="5" name="campoNotasReclamo"></textarea>
         </div>
 
         <div class="mb-3">
           <label for="campoEstadoReclamo" class="form-label">Estado</label>
-          <select id="campoEstadoReclamo" class="form-select" aria-label="Default select example">
+          <select id="campoEstadoReclamo" name="campoEstadoReclamo" class="form-select" aria-label="Default select example">
             <option value="abierto">Abierto</option>
             <option value="cerrado">Cerrado</option>
             <option value="incorrecto">Incorrecto</option>
@@ -48,29 +49,31 @@
         <div class="mb-3">
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="campoPrioridadReclamo" id="campoPrioridadReclamoAlta" value="alta">
-            <label class="form-check-label" for="campoPrioridadReclamoAlta">1</label>
+            <label class="form-check-label" for="campoPrioridadReclamoAlta">Prioridad alta</label>
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="campoPrioridadReclamo" id="campoPrioridadReclamoBaja" value="baja">
-            <label class="form-check-label" for="campoPrioridadReclamoBaja">2</label>
+            <label class="form-check-label" for="campoPrioridadReclamoBaja">Prioridad baja</label>
           </div>  
         </div>
 
         <div class="mb-3">
           <label for="campoNombreReclamo" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="campoNombreReclamo" placeholder="Juan">
+          <input type="text" class="form-control" name="campoNombreReclamo" id="campoNombreReclamo" placeholder="Juan">
         </div>
 
         <div class="mb-3">
           <label for="campoApellidoReclamo" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="campoApellidoReclamo" placeholder="Perez">
+          <input type="text" class="form-control" name="campoApellidoReclamo" id="campoApellidoReclamo" placeholder="Perez">
         </div>
 
         <div class="mb-3">
           <label for="campoEmailReclamo" class="form-label">Email</label>
-          <input type="email" class="form-control" id="campoEmailReclamo" placeholder="name@example.com">
+          <input type="email" class="form-control" name="campoEmailReclamo" id="campoEmailReclamo" placeholder="name@example.com">
         </div>
 
+        <button type="submit">Guardar reclamo</button>
+      </form>
 
     </div>
     <script src="js/bootstrap.bundle.js"></script>
