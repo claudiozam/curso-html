@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function saludar() {
+            console.log('Ejecutando el evento click saludar.....');
+            var campoDeTexto = document.getElementById('campoTexto');
+            var divContenido = document.getElementById('divContenido');
+            var valorCampoDeTexto = campoDeTexto.value;
+            divContenido.innerHTML = '<b>El valor del campo es:</b> ' + valorCampoDeTexto;
+        }
+
+    </script>
+</head>
+<body>
+
+    <div id="divContenido">Sin contenido...</div>
+    <input type="text" value="Por el momento no tengo valor...." id="campoTexto">
+    <button type="button" onclick="saludar()">Enviar datos</button>
+</body>
+</html>
