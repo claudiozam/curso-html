@@ -29,51 +29,9 @@
         </div>
     </nav>
     <div class="container">
-        <h1>Formulario de reclamo</h1>
+        <h1>Sistema de reclamos</h1>
 
-      <form id="formularioDeReclamo" action="altadereclamo.html" method="get">
-        <div class="mb-3">
-          <label for="campoNotasReclamo" class="form-label">Descripción del reclamo</label>
-          <textarea class="form-control" id="campoNotasReclamo" rows="5" name="campoNotasReclamo"></textarea>
-        </div>
-
-        <div class="mb-3">
-          <label for="campoEstadoReclamo" class="form-label">Estado</label>
-          <select id="campoEstadoReclamo" name="campoEstadoReclamo" class="form-select" aria-label="Default select example">
-            <option value="abierto">Abierto</option>
-            <option value="cerrado">Cerrado</option>
-            <option value="incorrecto">Incorrecto</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="campoPrioridadReclamo" id="campoPrioridadReclamoAlta" value="alta">
-            <label class="form-check-label" for="campoPrioridadReclamoAlta">Prioridad alta</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="campoPrioridadReclamo" id="campoPrioridadReclamoBaja" value="baja">
-            <label class="form-check-label" for="campoPrioridadReclamoBaja">Prioridad baja</label>
-          </div>  
-        </div>
-
-        <div class="mb-3">
-          <label for="campoNombreReclamo" class="form-label">Nombre</label>
-          <input type="text" class="form-control" name="campoNombreReclamo" id="campoNombreReclamo" placeholder="Juan" required>
-        </div>
-
-        <div class="mb-3">
-          <label for="campoApellidoReclamo" class="form-label">Apellido</label>
-          <input type="text" class="form-control" name="campoApellidoReclamo" id="campoApellidoReclamo" placeholder="Perez" required>
-        </div>
-
-        <div class="mb-3">
-          <label for="campoEmailReclamo" class="form-label">Email</label>
-          <input type="email" class="form-control" name="campoEmailReclamo" id="campoEmailReclamo" placeholder="name@example.com" required>
-        </div>
-
-        <button class="btn btn-primary" type="submit">Guardar reclamo</button>
-      </form>
+ 
 
     </div>
 
@@ -83,15 +41,5 @@
     <script src="js/messages_es.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
 
-    <script>
-      // document es la variable que representa a todos los elementos HTML de la pagina document = DOM
-      // Este metodo "ready" se ejecuta cuando se termina de cargar todo el HTML de la pagina y el DOM esta listo para trabajar!!!
-      // Sin este ready no puedo hacer nada porque la pagina no esta lista para trabajar!!!! 
-      $(document).ready(function() { 
-        // #formularioDeReclamo es el id que tiene el tag <form id="formularioDeReclamo" action="altadereclamo.html" method="get">
-        $('#formularioDeReclamo').validate(); //Ejecuta la validacion de la libreria https://jqueryvalidation.org/
-      });
-
-    </script>
   </body>
 </html>
