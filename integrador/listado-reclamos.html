@@ -49,7 +49,7 @@
               <td>Juan Perez</td>
               <td>juanp@hotmail.com</td>
               <td>12/12/2023</td>
-              <td><a href="" class="btn btn-info">Editar</a>&nbsp;<a href="" class="btn btn-danger btn-borrar">Borrar</a></td>
+              <td><a href="#" class="btn btn-info">Editar</a>&nbsp;<a href="#" class="btn btn-danger btn-borrar">Borrar</a></td>
             </tr>
             <tr>
               <td>2</td>
@@ -57,7 +57,7 @@
               <td>Maria Lopez</td>
               <td>mlopez@gmail.com</td>
               <td>12/12/2023</td>
-              <td><a href="" class="btn btn-info">Editar</a>&nbsp;<a href="" class="btn btn-danger btn-borrar">Borrar</a></td>
+              <td><a href="#" class="btn btn-info">Editar</a>&nbsp;<a href="#" class="btn btn-danger btn-borrar">Borrar</a></td>
             </tr>
           </tbody>
         </table>
@@ -80,9 +80,15 @@
         $('.btn-borrar').on('click', function(event) {
           event.preventDefault();
           
+
+          //var $soyElTr = $(this).parent().parent(); //Recupero el padre del padre que es el Tr de la tabla....
+          var $soyElTr = $(this).closest('tr'); //Esto es lo mismo que hacer $(this).parent().parent() pero directamente al tipo de elemento que quiero
+          
+
           bootbox.confirm('Borramos el reclamo', function(result) {
             if(result == true) {
               console.log('me suena que quiere borrar el reclamo.....');
+              $soyElTr.remove(); //eliminamos el html completo del TR!!!!!!!
             }
           });
 
