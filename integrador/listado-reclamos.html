@@ -49,7 +49,39 @@
               <td>Juan Perez</td>
               <td>juanp@hotmail.com</td>
               <td>12/12/2023</td>
-              <td><a href="#" class="btn btn-info">Editar</a>&nbsp;<a href="#" class="btn btn-danger btn-borrar">Borrar</a></td>
+              <td><a href="#" class="btn btn-primary btn-ver-inline">Ver</a><a href="#" class="btn btn-info">Editar</a>&nbsp;<a href="#" class="btn btn-danger btn-borrar">Borrar</a></td>
+            </tr>
+            <tr style="display: none;">
+              <td colspan="6">
+
+                <table class="table table-light">
+                  <tr>
+                    <td>Ejemplo1</td>
+                    <td>Ejemplo2</td>
+                    <td>Ejemplo3</td>
+                    <td>Ejemplo4</td>
+                    <td>Ejemplo5</td>
+                    <td>Ejemplo6</td>
+                    <td>Ejemplo7</td>
+                    <td>Ejemplo8</td>
+                    <td>Ejemplo9</td>
+                    <td>Ejemplo10</td>
+                  </tr>
+                  <tr>
+                    <td>Ejemplo1</td>
+                    <td>Ejemplo2</td>
+                    <td>Ejemplo3</td>
+                    <td>Ejemplo4</td>
+                    <td>Ejemplo5</td>
+                    <td>Ejemplo6</td>
+                    <td>Ejemplo7</td>
+                    <td>Ejemplo8</td>
+                    <td>Ejemplo9</td>
+                    <td>Ejemplo10</td>
+                  </tr>
+                </table>
+
+              </td>
             </tr>
             <tr>
               <td>2</td>
@@ -57,7 +89,7 @@
               <td>Maria Lopez</td>
               <td>mlopez@gmail.com</td>
               <td>12/12/2023</td>
-              <td><a href="#" class="btn btn-info">Editar</a>&nbsp;<a href="#" class="btn btn-danger btn-borrar">Borrar</a></td>
+              <td><a href="#" class="btn btn-info btn-ver-modal">Editar</a>&nbsp;<a href="#" class="btn btn-danger btn-borrar">Borrar</a></td>
             </tr>
           </tbody>
         </table>
@@ -79,8 +111,6 @@
         // #formularioDeReclamo es el id que tiene el tag <form id="formularioDeReclamo" action="altadereclamo.html" method="get">
         $('.btn-borrar').on('click', function(event) {
           event.preventDefault();
-          
-
           //var $soyElTr = $(this).parent().parent(); //Recupero el padre del padre que es el Tr de la tabla....
           var $soyElTr = $(this).closest('tr'); //Esto es lo mismo que hacer $(this).parent().parent() pero directamente al tipo de elemento que quiero
           
@@ -92,8 +122,18 @@
             }
           });
 
+        });
+        
+        
+        $('.btn-ver-inline').on('click', function(event) {
+          event.preventDefault();
+          var $soyElTr = $(this).closest('tr'); //Esto es lo mismo que hacer $(this).parent().parent() pero directamente al tipo de elemento que quiero
+          var $proximoTr = $soyElTr.next();
+          //$proximoTr.show();
+          //$proximoTr.css('display', 'inline');
+          $proximoTr.toggle('slow');
 
-        });    
+        })
       });
 
     </script>
