@@ -49,7 +49,7 @@
               <td>Juan Perez</td>
               <td>juanp@hotmail.com</td>
               <td>12/12/2023</td>
-              <td><a href="#" class="btn btn-primary btn-ver-inline">Ver</a><a href="#" class="btn btn-info">Editar</a>&nbsp;<a href="#" class="btn btn-danger btn-borrar">Borrar</a></td>
+              <td><a href="#" class="btn btn-primary btn-ver-inline">Ver</a>&nbsp;<a href="#" class="btn btn-info">Editar</a>&nbsp;<a href="#" class="btn btn-danger btn-borrar">Borrar</a></td>
             </tr>
             <tr style="display: none;">
               <td colspan="6">
@@ -89,12 +89,32 @@
               <td>Maria Lopez</td>
               <td>mlopez@gmail.com</td>
               <td>12/12/2023</td>
-              <td><a href="#" class="btn btn-info btn-ver-modal">Editar</a>&nbsp;<a href="#" class="btn btn-danger btn-borrar">Borrar</a></td>
+              <td><a href="#" class="btn btn-primary btn-ver-modal">Ver</a>&nbsp;<a href="#" class="btn btn-info">Editar</a>&nbsp;<a href="#" class="btn btn-danger btn-borrar">Borrar</a></td>
             </tr>
           </tbody>
         </table>
      
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalDatosReclamo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Ejemplo de contenido modal.....
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/jquery.validate.js"></script>
@@ -133,7 +153,15 @@
           //$proximoTr.css('display', 'inline');
           $proximoTr.toggle('slow');
 
-        })
+        });
+
+        $('.btn-ver-modal').on('click', function(event) {
+          event.preventDefault();
+          var miModal  = new bootstrap.Modal('#modalDatosReclamo');
+          miModal.show();
+        });
+
+
       });
 
     </script>
