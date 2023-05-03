@@ -1,0 +1,11 @@
+<p>holamundo works!</p>
+<div>{{nombre}}<br>{{edad}}</div>
+<br>
+<b>{{textoSaludos}}</b>
+<button type="button" (click)="eventoClickSaludar()">Saludar angular</button><br>
+<input type="text" name="campoNombre" [(ngModel)]="nombre">
+<table>
+    <tr><th>Nombre</th></tr>
+    <tr *ngFor="let p of personas"><td>{{p}}</td></tr>
+</table>
+<button type="button" (click)="eventoClickAgregarPersona()">Agregar persona</button>
