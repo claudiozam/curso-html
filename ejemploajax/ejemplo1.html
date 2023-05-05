@@ -11,6 +11,7 @@
             $('#botonAjax').on('click', function() {
                 console.log('Ejecutando la llamada ajax...');
 
+                //Esto es lo que permite hacer la llama ajax......
                 $.get('contenidoajax.html', function(respuesta) {
                     $('#divContenidoAjax').append(respuesta);
                 });
