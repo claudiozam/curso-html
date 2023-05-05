@@ -9,10 +9,14 @@
     <script>
         $(document).ready(function() {
             $('#botonCalcular').on('click', function() {
+                $('#imgAjaxCargando').show();
+                $('#botonCalcular').prop('disabled', true);
                 var campoNumero1 = $('#campoNumero1').val();
                 var campoNumero2 = $('#campoNumero2').val();
                 var parametrosAjax = { "numero1" : campoNumero1, "numero2" : campoNumero2 };
                 $.get('respuestacalculadoraconajax.php', parametrosAjax, function(respuesta) {
+                    $('#botonCalcular').prop('disabled', false);
+                    $('#imgAjaxCargando').hide();
                     $('#resultadoAjaxCalculadora').html(respuesta);
                 });
             });
@@ -22,6 +26,7 @@
 <body>
         Nume1: <input type="number" id="campoNumero1"><br>
         Nume2: <input type="number" id="campoNumero2"><br>
+        <img src="img/1484.gif" id="imgAjaxCargando" style="display: none;">
         <div id="resultadoAjaxCalculadora"></div>
         <button type="button" id="botonCalcular">Calcular</button>
 </body>
