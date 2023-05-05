@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#botonJson').on('click', function() {
+                $.getJSON('https://jsonplaceholder.typicode.com/posts/1', function(dato) {
+                    console.log(dato);
+                    $('#contenidoAjax').html('<b>Dato:</b> ' + dato.id + ' - ' + dato.title);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="botonJson">Boton JSON</button>
+    <div id="contenidoAjax"></div>
+</body>
+</html>
